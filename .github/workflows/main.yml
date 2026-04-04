@@ -2,8 +2,10 @@
 ---
 name: hello
 on:
-# add the manual keyword for delivery
-  workflow_dispatch: 
+ push:
+   branches: [main]
+   paths:
+   - '**.html'
   
 jobs:
   greet:
