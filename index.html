@@ -1,264 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biswajit Andia | DevOps Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biswajit Andia | DevOps Engineer</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    body {
-      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-      color:white;
-    }
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
 
-    .glass {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(15px);
-      border-radius:20px;
-      border:1px solid rgba(255,255,255,0.2);
-      box-shadow:0 8px 32px rgba(0,0,0,0.3);
-    }
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10%;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
 
-    header {
-      display:flex;justify-content:space-between;align-items:center;
-      padding:20px 50px;position:sticky;top:0;
-    }
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-    nav a {
-      margin-left:20px;color:white;text-decoration:none;
-      transition:0.3s;
-    }
+nav a:hover {
+    color: #00f5ff;
+}
 
-    nav a:hover {color:#00ffe7;}
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    section {padding:60px 10%;}
+.glass {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    transition: 0.4s;
+}
 
-    .hero {display:flex;flex-wrap:wrap;gap:40px;align-items:center;}
+.glass:hover {
+    transform: scale(1.03);
+}
 
-    h1 {font-size:3rem;}
+.hero h1 {
+    font-size: 45px;
+}
 
-    .btn {
-      padding:12px 25px;border-radius:30px;
-      background:#00ffe7;color:black;margin-top:15px;
-      display:inline-block;transition:0.3s;font-weight:600;
-    }
+.hero span {
+    color: #00f5ff;
+}
 
-    .btn:hover {transform:scale(1.1);box-shadow:0 0 20px #00ffe7;}
+.btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #00f5ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    .skills,.projects {
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;
-    }
+.btn:hover {
+    transform: scale(1.1);
+}
 
-    .card {padding:20px;transition:0.3s;text-align:center;}
-    .card img {margin-bottom:10px;transition:0.3s;}
-    .card:hover img {transform:scale(1.2);filter:drop-shadow(0 0 10px #00ffe7);}
-    .card:hover {transform:translateY(-10px) scale(1.03);}
+/* SECTION */
+section {
+    padding: 100px 10%;
+}
 
-    footer {text-align:center;padding:20px;opacity:0.7;}
+h2 {
+    margin-bottom: 30px;
+}
 
-    /* Floating Resume Button */
-    .floating-btn {
-      position:fixed;bottom:20px;right:20px;
-      background:#00ffe7;color:black;
-      padding:15px;border-radius:50%;
-      font-size:18px;text-decoration:none;
-      box-shadow:0 0 15px #00ffe7;
-    }
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 25px;
+}
 
-  </style>
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255,255,255,0.15);
+}
+
+/* TAG */
+.tag {
+    display: inline-block;
+    background: rgba(0,245,255,0.2);
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+}
+</style>
 </head>
 
 <body>
 
-<header class="glass">
-  <h2>Biswajit</h2>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<!-- NAV -->
+<nav>
+    <h3>Biswajit</h3>
+    <div>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+    </div>
+</nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>Hi, I'm Biswajit</h1>
-    <h2><span id="typing"></span></h2>
-
-    <a href="#contact" class="btn">Hire Me</a>
-    <a href="BISWAJIT_RESUME_DEVOPS_ENGINEER.pdf" download class="btn" style="background:white;color:black;">Download Resume</a>
-  </div>
-
-  <div class="glass card">
-    <p>DevOps Engineer & Backend Developer specializing in scalable systems, CI/CD, and cloud deployments.</p>
-  </div>
+    <div class="glass">
+        <h1>Hi, I'm <span>Biswajit Andia</span></h1>
+        <p>DevOps Engineer • Java Backend Developer • Cloud Enthusiast</p>
+        <p>Building scalable systems, automating deployments, and optimizing performance.</p>
+        <button class="btn">Download Resume</button>
+    </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-  <h2>About Me</h2>
-  <div class="glass card">
-    <p>I am a passionate DevOps Engineer and Java Backend Developer currently pursuing MCA. I specialize in building scalable, secure, and high-performance applications using modern DevOps practices and cloud technologies.</p>
-    <p>I have hands-on experience with CI/CD pipelines, containerization, infrastructure automation, and microservices architecture. I enjoy solving real-world problems, optimizing system performance, and deploying reliable applications with high availability.</p>
-    <p>My goal is to work in a challenging environment where I can contribute to building efficient systems while continuously learning and growing in DevOps and cloud engineering.</p>
-  </div>
+    <h2>Professional Summary</h2>
+    <div class="glass">
+        <p>
+            Versatile DevOps Engineer and Java Backend Developer with hands-on experience in building scalable backend systems 
+            using Java, Spring Boot, and REST APIs. Skilled in CI/CD pipelines, Docker, Kubernetes, and cloud platforms (AWS, Azure). 
+            Strong expertise in microservices, containerization, and performance optimization with proven impact in reducing latency and deployment time.
+        </p>
+    </div>
 </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-
-    <div class="glass card"><h3>DevOps & Cloud</h3><p>Docker, Kubernetes, Jenkins, Terraform, CI/CD, AWS (EC2, S3, IAM, EBS)</p></div>
-
-    <div class="glass card"><h3>Operating Systems & Scripting</h3><p>Linux (Ubuntu, CentOS), Bash</p></div>
-
-    <div class="glass card"><h3>Web & Networking</h3><p>NGINX, Apache, DNS, Firewall, SSL/TLS</p></div>
-
-    <div class="glass card"><h3>Version Control</h3><p>Git, GitHub, GitLab</p></div>
-
-    <div class="glass card"><h3>Programming & Backend</h3><p>Java, Python, Spring Boot, REST APIs</p></div>
-
-    <div class="glass card"><h3>Database & Tools</h3><p>MySQL, MongoDB, Maven, Postman</p></div>
-
-  </div>
-</section>
-
+<!-- EXPERIENCE -->
 <section id="experience">
-  <h2>Experience</h2>
-  <div class="glass card">
-    <h3>YHills Edutech</h3>
-    <p>Worked on backend and DevOps systems improving performance and deployment pipelines.</p>
-  </div>
+    <h2>Work Experience</h2>
+    <div class="card">
+        <h3>DevOps & Backend Intern - YHills Edutech</h3>
+        <p>Noida, India</p>
+        <ul>
+            <li>Handled 1000+ API requests/day using Spring Boot</li>
+            <li>Reduced API response time by 30%</li>
+            <li>Built CI/CD pipelines (Docker + Jenkins) → deployment time ↓ 50%</li>
+            <li>Achieved 99.9% uptime on AWS/GCP</li>
+        </ul>
+    </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
+    <h2>Projects</h2>
+    <div class="grid">
 
-    <div class="glass card">
-      <h3>🚀 MCP Server for Crypto Market Data</h3>
-      <p>Built a high-performance backend using FastAPI to handle real-time and historical crypto market data.</p>
-      <ul>
-        <li>Handled multi-exchange data with latency &lt;200ms</li>
-        <li>Implemented TTL caching (↓ 40% redundant API calls)</li>
-        <li>Used Server-Sent Events (SSE) for real-time streaming</li>
-        <li>Dockerized for scalable deployment</li>
-      </ul>
+        <div class="card">
+            <h3>Crypto MCP Server</h3>
+            <p>Real-time crypto data server with <200ms latency</p>
+            <p>✔ SSE Streaming (60% faster)</p>
+            <p>✔ TTL caching (40% fewer requests)</p>
+            <p>✔ 85% test coverage (Pytest)</p>
+        </div>
+
+        <div class="card">
+            <h3>Student Management System</h3>
+            <p>Spring Boot based system with optimized DB</p>
+            <p>✔ Performance improved by 40%</p>
+            <p>✔ Error reduction by 35%</p>
+            <p>✔ Dockerized deployment</p>
+        </div>
+
     </div>
-
-    <div class="glass card">
-      <h3>📚 Student Management System</h3>
-      <p>Spring Boot backend system with REST APIs and Docker deployment.</p>
-    </div>
-
-  </div>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="glass card">
-    <p>Email: rbbiswajit2@gmail.com</p>
-    <p>Phone: +91 6372119874</p>
-    <p>
-      <a href="https://www.linkedin.com/in/biswajit-andia-a5b035304" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/BiswajitRB" target="_blank">GitHub</a>
-    </p>
-  </div>
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>DevOps & Cloud</h3>
+            <span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Terraform</span>
+        </div>
+
+        <div class="card">
+            <h3>Backend</h3>
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Python</span>
+        </div>
+
+        <div class="card">
+            <h3>Systems & Tools</h3>
+            <span class="tag">Linux</span>
+            <span class="tag">NGINX</span>
+            <span class="tag">Git</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">MongoDB</span>
+        </div>
+
+    </div>
 </section>
 
+<!-- ACHIEVEMENTS -->
+<section>
+    <h2>Achievements</h2>
+    <div class="grid">
+        <div class="card">🏆 Runner-up among 2000+ participants</div>
+        <div class="card">🔐 Reported critical XSS vulnerability</div>
+        <div class="card">🚀 Delivered 5+ production projects (0 downtime)</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Biswajit Andia</p>
+    © 2026 Biswajit Andia | DevOps Portfolio
 </footer>
-
-<a href="BISWAJIT_RESUME_DEVOPS_ENGINEER.pdf" download class="floating-btn">⬇</a>
-
-<script>
-  var typed = new Typed("#typing", {
-    strings: ["DevOps Engineer","Java Backend Developer","Cloud Enthusiast"],
-    typeSpeed: 60,
-    backSpeed: 40,
-    loop: true
-  });
-</script>
-
-
-
-<!-- DevOps Pipeline Visual -->
-<section>
-  <h2>DevOps Pipeline</h2>
-  <div class="glass card" style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;">
-    <div>Code</div>
-    <div>→</div>
-    <div>Build</div>
-    <div>→</div>
-    <div>Test</div>
-    <div>→</div>
-    <div>Deploy</div>
-    <div>→</div>
-    <div>Monitor</div>
-  </div>
-</section>
-
-<!-- Static Projects Section (No API - Static Website) -->
-<section>
-  <h2>Highlighted Projects</h2>
-  <div class="projects">
-    <div class="glass card">
-      <h3>🚀 MCP Crypto Server</h3>
-      <p>FastAPI-based backend handling real-time crypto data with caching, SSE streaming, and Docker deployment.</p>
-    </div>
-    <div class="glass card">
-      <h3>📚 Student Management System</h3>
-      <p>Spring Boot REST API system with optimized queries and Dockerized deployment.</p>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Case Studies Section -->
-<section id="case-studies">
-  <h2>Project Case Studies</h2>
-
-  <div class="glass card">
-    <h3>🚀 Crypto Market MCP Server</h3>
-    <p><b>Problem:</b> Real-time crypto data across exchanges suffers from latency and redundant API calls.</p>
-    <p><b>Solution:</b> Built a FastAPI-based server with async processing, TTL caching, and SSE streaming.</p>
-    <p><b>Impact:</b></p>
-    <ul>
-      <li>⚡ Reduced latency to &lt;200ms</li>
-      <li>📉 Reduced redundant requests by 40%</li>
-      <li>📡 Improved real-time delivery speed by 60%</li>
-    </ul>
-  </div>
-
-  <div class="glass card">
-    <h3>📚 Student Management System</h3>
-    <p><b>Problem:</b> Inefficient manual data handling and poor system reliability.</p>
-    <p><b>Solution:</b> Developed Spring Boot backend with REST APIs, validation, and Docker deployment.</p>
-    <p><b>Impact:</b></p>
-    <ul>
-      <li>⚡ Improved data handling efficiency by 40%</li>
-      <li>🔐 Reduced system errors by 35%</li>
-      <li>🚀 Boosted deployment efficiency by 50%</li>
-    </ul>
-  </div>
-
-</section>
-
-<!-- Deployment Note -->
-<section>
-  <h2>Deployment</h2>
-  <div class="glass card">
-    <p>This portfolio is designed to be deployed on platforms like <b>Vercel</b> or <b>Netlify</b> for fast global access.</p>
-    <p><b>Next Step:</b> Deploy and share this link with recruiters.</p>
-  </div>
-</section>
 
 </body>
 </html>
