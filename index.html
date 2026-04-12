@@ -3,217 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biswajit Andia | DevOps Engineer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Biswajit Andia | Portfolio</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{color:white;overflow-x:hidden;}
-
-/* 🌈 Animated Background */
-body::before{
-content:"";
-position:fixed;
-width:200%;
-height:200%;
-background:linear-gradient(45deg,#00f5ff,#0066ff,#8e2de2,#ff00cc);
-animation:moveBg 10s linear infinite;
-z-index:-1;
-}
-@keyframes moveBg{
-0%{transform:translate(0,0);}
-50%{transform:translate(-25%,-25%);}
-100%{transform:translate(0,0);}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
 }
 
-/* Cursor */
-.cursor{
-position:fixed;
-width:20px;height:20px;
-background:#00f5ff;
-border-radius:50%;
-pointer-events:none;
-box-shadow:0 0 20px #00f5ff;
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-/* NAV */
-nav{
-position:fixed;
-width:100%;
-padding:20px 10%;
-backdrop-filter:blur(10px);
-background:rgba(255,255,255,0.05);
-display:flex;
-justify-content:space-between;
-z-index:1000;
-}
-nav a{color:white;margin-left:20px;text-decoration:none;}
-nav a:hover{color:#00f5ff;}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-.glass{
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(20px);
-padding:50px;
-border-radius:20px;
-text-align:center;
-transition:0.3s;
-}
-.glass:hover{transform:scale(1.05);}
-.typing{color:#00f5ff;font-weight:bold;}
-
-/* SECTION */
-section{padding:100px 10%;}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+section {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* CARD */
-.card{
-background:rgba(255,255,255,0.1);
-padding:20px;
-border-radius:15px;
-transition:0.3s;
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
 }
-.card:hover{transform:translateY(-10px);}
 
-/* FORM */
-input,textarea{
-width:100%;
-padding:10px;
-margin:10px 0;
-border-radius:10px;
-border:none;
+.card {
+    background: white;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
 }
-button{
-padding:10px 20px;
-border-radius:20px;
-border:none;
-background:#00f5ff;
-cursor:pointer;
+
+ul {
+    padding-left: 20px;
 }
-#form-status{margin-top:10px;}
+
+.skill-box {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
 </style>
 </head>
 
 <body>
 
-<div class="cursor"></div>
+<header>
+    <h1>Biswajit Andia</h1>
+    <p>DevOps Engineer | Java Backend Developer</p>
+</header>
 
-<!-- NAV -->
-<nav>
-<h3>Biswajit</h3>
-<div>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-<div class="glass">
-<h1>Hi, I'm Biswajit Andia</h1>
-<h2>I am a <span class="typing"></span></h2>
-<p>DevOps Engineer • Java Backend • Cloud Enthusiast</p>
-</div>
+<section>
+    <h2>Professional Summary</h2>
+    <div class="card">
+        <p>
+            DevOps Engineer and Java Backend Developer with experience in building scalable systems using Java, Spring Boot, and REST APIs.
+            Skilled in Docker, Kubernetes, CI/CD, and cloud platforms like AWS.
+        </p>
+    </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-<h2>Projects</h2>
-<div class="grid">
+<section>
+    <h2>Skills</h2>
+    <div class="card">
 
-<div class="card">
-<h3>Crypto MCP Server</h3>
-<p>FastAPI + Docker + Real-time crypto streaming</p>
-</div>
+        <div class="skill-box">
+            <p><strong>🐳 DevOps & Cloud:</strong> Docker, Kubernetes, Jenkins, AWS</p>
+            <p>Experience in building CI/CD pipelines, containerizing applications, and deploying scalable services on cloud platforms.</p>
+        </div>
 
-<div class="card">
-<h3>Student Management System</h3>
-<p>Spring Boot + MySQL + Docker</p>
-</div>
+        <div class="skill-box">
+            <p><strong>☕ Backend Development:</strong> Java, Spring Boot, REST APIs, Python</p>
+            <p>Strong backend development skills with focus on building RESTful APIs and scalable microservices.</p>
+        </div>
 
-</div>
+        <div class="skill-box">
+            <p><strong>💻 Systems & Tools:</strong> Linux, Git, MySQL, MongoDB</p>
+            <p>Hands-on experience with Linux environments, version control, and managing relational and NoSQL databases.</p>
+        </div>
+
+        <div class="skill-box">
+            <p><strong>🌐 Web & Networking:</strong> NGINX, Apache, DNS, SSL/TLS</p>
+            <p>Knowledge of web servers, networking basics, and securing applications using modern protocols.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact Me</h2>
+<section>
+    <h2>Projects</h2>
 
-<form id="contact-form" action="https://formspree.io/f/xaqawyaz" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <div class="card">
+        <h3>Crypto MCP Server</h3>
+        <p>FastAPI-based server for real-time crypto data with low latency and Docker deployment.</p>
+    </div>
 
-<button type="submit">Send Message</button>
-<p id="form-status"></p>
-</form>
+    <div class="card">
+        <h3>Student Management System</h3>
+        <p>Spring Boot application with CRUD APIs and MySQL database.</p>
+    </div>
 
 </section>
 
-<script>
-// ✨ Typing Effect
-const roles=["DevOps Engineer","Java Developer","Cloud Engineer"];
-let i=0,j=0,current="",isDeleting=false;
+<section>
+    <h2>Contact</h2>
+    <div class="card">
+        <p><strong>Email:</strong> rbbiswajit2@gmail.com</p>
+        <p><strong>Phone:</strong> 6372119874</p>
+    </div>
+</section>
 
-function type(){
-if(i<roles.length){
-if(!isDeleting&&j<=roles[i].length){
-current=roles[i].substring(0,j++);
-}else if(isDeleting&&j>=0){
-current=roles[i].substring(0,j--);
-}
-document.querySelector(".typing").textContent=current;
-
-if(j===roles[i].length)isDeleting=true;
-if(j===0){isDeleting=false;i++;}
-}else{i=0;}
-
-setTimeout(type,isDeleting?50:100);
-}
-type();
-
-// 🎯 Cursor Glow
-const cursor=document.querySelector(".cursor");
-document.addEventListener("mousemove",e=>{
-cursor.style.top=e.clientY+"px";
-cursor.style.left=e.clientX+"px";
-});
-
-// 🚀 Form Submit (no reload)
-const form=document.getElementById("contact-form");
-const status=document.getElementById("form-status");
-
-form.addEventListener("submit",async function(e){
-e.preventDefault();
-const data=new FormData(form);
-
-const response=await fetch(form.action,{
-method:form.method,
-body:data,
-headers:{'Accept':'application/json'}
-});
-
-if(response.ok){
-status.innerHTML="✅ Message sent successfully!";
-form.reset();
-}else{
-status.innerHTML="❌ Something went wrong!";
-}
-});
-</script>
+<footer>
+    © 2026 Biswajit Andia
+</footer>
 
 </body>
 </html>
