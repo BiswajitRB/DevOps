@@ -17,6 +17,11 @@ jobs:
               with:
                 username: ${{vars.DOCKERHUB_USER}}
                 password: ${{secrets.DOCKERHUB_TOKEN}}
+            
+            - name: Debug secrets
+              run: |
+               echo "USERNAME: ${{ secrets.DOCKER_USERNAME != '' }}"
+               echo "PASSWORD: ${{ secrets.DOCKER_PASSWORD != '' }}"
 
 
             - name: build and push to  docker
