@@ -1,0 +1,33 @@
+#in  this application we use linting and SAST for code scanning
+#for SAST we use Bandit
+#lint-flake8
+#its called by other workflow :i.e build becouse we know(codescan->buildscan->testscan->deploy) before build the codescan have to pass correctly
+name: code quality
+
+on:
+    workflow_call:
+jobs:
+    validate:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                python-version: ["3.13", "3.12", "3.11", "3.10",]
+        
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v4
+        
+            - name: python setup ${{ Matrix.python-version}}
+              uses: actions/setup-python@v5
+              with:
+                python-version: ${{ Matrix.python-version }}
+
+            - name: install dependencies
+              run: pip install -r requirements.txt
+
+            - name: run linter
+              run: flake8 app.py
+
+            - name: run SAST 
+              run: bandit -r app.py
