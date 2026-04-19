@@ -22,8 +22,8 @@ jobs:
         needs: [build]
         uses: ./.github/workflows/image-scan.yml
         secrets:
-          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-          DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
+            inherit
+        trivyignore: ${{ github.workspace }}/.trivyignore
 
 
     
