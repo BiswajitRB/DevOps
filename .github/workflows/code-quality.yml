@@ -1,7 +1,7 @@
 #in  this application we use linting and SAST for code scanning
 #for SAST we use Bandit
 #lint-flake8
-#its called by other workflow :i.e build becouse we know(codescan->buildscan->testscan->deploy) before build the codescan have to pass correctly
+#its called by other workflow :i.e build becouse we know(codescan->buildscan->testscan->deploy) before build the codescan workflow have to pass correctly
 name: code quality
 
 on:
