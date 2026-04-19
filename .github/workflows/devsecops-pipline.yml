@@ -18,4 +18,8 @@ jobs:
         secrets:
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
           DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
+    tiivy_scan:
+        needs: [build]
+        uses: ./.github/workflows/image-scan.yml
+
     
