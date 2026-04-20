@@ -18,11 +18,12 @@ jobs:
         secrets:
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
           DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
-    tiivy_scan:
+    trivy_scan:
         needs: [build]
         uses: ./.github/workflows/image-scan.yml
         secrets:
             inherit
-
-
-    
+    server_deploy:
+        needs: [trivy_scan]
+        uses: ./.github/workflows/Deploy-to-server.yml
+        secrets: inherit
